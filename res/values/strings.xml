@@ -6,4 +6,5 @@
     <string name="vote_button">Vote</string>
     <string name="add_button">Add</string>
     <string name="enter_choice_text">Enter Your Choice</string>
+    <string name="choice_added_toast">Choice added successfully!</string>
 </resources>
