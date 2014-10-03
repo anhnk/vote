@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class VoteActivity extends ActionBarActivity {
 	private ArrayList<Choice> mChoices;
@@ -53,5 +54,9 @@ public class VoteActivity extends ActionBarActivity {
         		choice.setVoteCount(choice.getVoteCount() + 1);
         	}
         }
+        
+        Toast.makeText(VoteActivity.this,
+        			   R.string.thanks_vote_toast,
+        			   Toast.LENGTH_SHORT).show();
 	}
 }
