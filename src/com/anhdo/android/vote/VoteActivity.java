@@ -2,16 +2,19 @@ package com.anhdo.android.vote;
 
 import java.util.ArrayList;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class VoteActivity extends ActionBarActivity {
 	private ArrayList<Choice> mChoices;
+	private Button mCountButton;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +32,16 @@ public class VoteActivity extends ActionBarActivity {
 		}
 		
 		mChoices = getIntent().getParcelableArrayListExtra("choice");
+		
+		mCountButton = (Button)findViewById(R.id.count_vote_button);
+        mCountButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				Intent i = new Intent(VoteActivity.this, CountActivity.class);
+				i.putParcelableArrayListExtra("vote", mChoices);
+				startActivity(i);
+			}
+		});
 	}
 	
 	public void myClickHandler(View v) {
