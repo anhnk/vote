@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Vote</string>
     <string name="action_settings">Settings</string>
     <string name="clear_button">Clear</string>
     <string name="vote_button">Vote</string>
+    <string name="count_vote_button">Count Votes</string>
     <string name="add_button">Add</string>
     <string name="enter_choice_text">Enter Your Choice</string>
     <string name="choice_added_toast">Choice added successfully!</string>
+    <string name="choices">Choices</string>
+
 </resources>
